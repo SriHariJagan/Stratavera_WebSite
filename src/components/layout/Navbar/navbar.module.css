@@ -1,0 +1,338 @@
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  /* background:rgba(13,110,253,0.92); */
+
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+  transition: all 0.35s ease;
+}
+
+/* glass effect when scrolling */
+
+.scrolled {
+  background: rgba(0, 0, 0, 0.318);
+
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid var(--border-light);
+
+  box-shadow: var(--shadow-sm);
+}
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.container {
+  max-width: 1250px;
+  margin: auto;
+
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 2rem;
+}
+
+/* ========================================
+   LOGO
+======================================== */
+
+.logo img {
+  height: 50px;
+  transition: transform 0.35s ease;
+  margin-top: 4px;
+}
+
+.logo img:hover {
+  transform: scale(1.07);
+}
+
+/* ========================================
+   NAV LINKS
+======================================== */
+
+.navLinks {
+  display: flex;
+  gap: 2.6rem;
+}
+
+.navLink {
+  position: relative;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  color: #d7ecff;
+
+  letter-spacing: 0.4px;
+
+  transition: var(--transition);
+}
+
+/* underline animation */
+
+.navLink::after {
+  content: "";
+
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+
+  width: 0%;
+  height: 2px;
+
+  background: linear-gradient(90deg, var(--primary-light), var(--accent-blue));
+
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.navLink:hover {
+  color: #ffffff;
+}
+
+/* ========================================
+   ACTIVE LINK
+======================================== */
+
+.active {
+  color: white;
+  font-weight: 600;
+}
+
+.active::after {
+  width: 100%;
+}
+
+/* ========================================
+   CTA BUTTON
+======================================== */
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #fff;
+
+  padding: 12px 28px;
+  border-radius: 999px;
+
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+
+  border: none;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.25);
+}
+
+.ctaBtn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 28px rgba(79, 70, 229, 0.35);
+  color: wheat;
+
+  background: linear-gradient(135deg, #4f46e5, #4338ca);
+}
+
+.ctaBtn:active {
+  transform: translateY(0);
+
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+}
+
+/* ========================================
+   MOBILE BUTTON
+======================================== */
+
+.mobileBtn {
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding-top: 5px;
+}
+
+/* HOVER */
+
+.mobileBtn:hover {
+  background: rgba(255, 255, 255, 0.15);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ACTIVE CLICK */
+
+.mobileBtn:active {
+  transform: scale(0.95);
+}
+
+/* ICON SIZE */
+
+.mobileBtn svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* ========================================
+   OVERLAY
+======================================== */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.4);
+
+  backdrop-filter: blur(4px);
+}
+
+/* ========================================
+   MOBILE MENU
+======================================== */
+
+.mobileMenu {
+  position: fixed;
+
+  top: 0;
+  right: 0;
+
+  width: 300px;
+  height: 100vh;
+
+  background: rgba(158, 200, 255, 0.858);
+
+  backdrop-filter: blur(20px);
+
+  padding: 2.2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+
+  box-shadow: var(--shadow-md);
+}
+
+/* mobile link */
+
+.mobileLink {
+  font-size: 18px;
+  font-weight: 500;
+
+  color: var(--text-primary);
+
+  padding: 10px 12px;
+
+  border-radius: var(--radius-md);
+
+  transition: all 0.25s ease;
+}
+
+.mobileLink:hover {
+  background: var(--bg-hover);
+}
+
+/* active mobile */
+
+.mobileActive {
+  background: var(--bg-hover);
+
+  color: var(--primary-blue);
+
+  font-weight: 600;
+  width: 60%;
+  padding-left: 40px;
+}
+
+/* ========================================
+   CLOSE BUTTON
+======================================== */
+
+.closeBtn {
+  align-self: flex-end;
+
+  background: #483fa5d3;
+  border: none;
+
+  cursor: pointer;
+
+  border: 1px solid #4338ca;
+  border-radius: 50%;
+  padding: 5px 10px;
+  padding-top: 9px;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+  .ctaBtn {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    height: 60px;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .mobileBtn {
+    display: block;
+    margin-top: 8px;
+  }
+}
+
+
+button{
+  padding: 0;
+}

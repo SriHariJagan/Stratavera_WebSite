@@ -1,0 +1,148 @@
+.section {
+  width: 100%;
+  padding-inline: 20px;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+  top: -80px;
+}
+
+.container {
+
+  max-width: 1200px;
+  width: 100%;
+
+  padding: 24px 40px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  border-radius: 30px;
+
+  /* Glass Background */
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,0.65),
+    rgba(255,255,255,0.35)
+  );
+
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+
+  /* Soft glass border */
+  border: 1px solid rgba(255,255,255,0.4);
+
+  /* Depth shadow */
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.08),
+    0 8px 25px rgba(26,115,232,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.5);
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.container::before{
+  content:"";
+  position:absolute;
+  top:-40%;
+  left:-40%;
+
+  width:200%;
+  height:200%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255,255,255,0.4),
+    transparent 60%
+  );
+
+  opacity:0.25;
+  pointer-events:none;
+}
+
+/* CARD */
+
+.card {
+  text-align: center;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* ICON */
+
+.icon {
+  width: 60px;
+  height: 60px;
+
+  margin: auto;
+  margin-bottom: 20px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary-blue),
+    var(--primary-light)
+  );
+
+  color: white;
+
+  box-shadow: 0 8px 22px rgba(26,115,232,0.25);
+
+  transition: var(--transition);
+}
+
+.card:hover .icon {
+  transform: scale(1.08);
+  box-shadow: 0 14px 35px rgba(26,115,232,0.35);
+}
+
+/* TITLE */
+
+.card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+
+  color: var(--text-primary);
+}
+
+/* TEXT */
+
+.card p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 350px) {
+  .section {
+    top: 0;
+  }
+}

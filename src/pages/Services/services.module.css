@@ -1,0 +1,480 @@
+.servicesPage {
+  background: linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
+}
+
+/* ================= SERVICES SECTION ================= */
+
+.servicesSection {
+  max-width: 1200px;
+  margin: auto;
+  padding: 90px 20px;
+  text-align: center;
+}
+
+/* LABEL */
+
+.label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+
+  color: var(--primary-blue);
+
+  background: rgba(37, 99, 235, 0.08);
+
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+/* HEADING */
+
+.servicesSection h2 {
+  font-size: 32px;
+  margin-top: 16px;
+  color: var(--text-primary);
+}
+
+/* DESCRIPTION */
+
+.sectionText {
+  max-width: 620px;
+  margin: auto;
+  margin-top: 14px;
+
+  color: var(--text-secondary);
+}
+
+/* ================= SERVICES GRID ================= */
+
+.servicesGrid {
+  margin-top: 60px;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 35px;
+}
+
+/* ================= SERVICE CARD ================= */
+
+.serviceCard {
+  max-width: 1200px;
+  margin: 10px auto 0;
+  padding: 50px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+
+  border-radius: 22px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,0.92),
+    rgba(255,255,255,0.75)
+  );
+
+  backdrop-filter: blur(20px) saturate(150%);
+
+  border: 1px solid rgba(255,255,255,0.7);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.06),
+    0 12px 30px rgba(37,99,235,0.08);
+
+  transition: all .35s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 35px 80px rgba(0,0,0,0.08),
+    0 18px 40px rgba(37,99,235,0.14);
+}
+
+
+
+/* ================= IMAGE ================= */
+
+.serviceImage {
+  width: 100%;
+  height: 100%;
+}
+
+.serviceImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  border-radius: 24px 150px 24px 24px;
+
+  transition: transform .4s ease;
+}
+
+.serviceCard:hover .serviceImage img {
+  transform: scale(1.05);
+}
+
+
+
+/* ================= CONTENT ================= */
+
+.serviceContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+/* TITLE */
+
+.serviceContent h3 {
+  font-size: 24px;
+  font-weight: 600;
+
+  margin-bottom: 14px;
+
+  color: var(--text-primary);
+}
+
+
+
+/* DESCRIPTION */
+
+.serviceContent p {
+  color: var(--text-secondary);
+
+  margin-bottom: 22px;
+
+  line-height: 1.6;
+
+  font-size: 15px;
+}
+
+
+
+/* ================= BENEFITS ================= */
+
+.benefits {
+  list-style: none;
+  padding: 0;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+
+/* BENEFIT ITEM */
+
+.benefits li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: var(--text-secondary);
+  font-size: 14.5px;
+
+  line-height: 1.4;
+}
+
+
+
+/* CHECK ICON */
+
+.checkIcon {
+  color: var(--primary-blue);
+  font-size: 16px;
+
+  min-width: 18px;
+}
+
+
+
+
+/* ================= PROCESS SECTION ================= */
+
+.processSection {
+  padding: 110px 20px;
+  text-align: center;
+}
+
+.processSection h2 {
+  font-size: 28px;
+  margin-top: 14px;
+  color: var(--text-primary);
+}
+
+.processText {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 14px;
+
+  color: var(--text-secondary);
+}
+
+/* GRID */
+
+.processGrid {
+  margin-top: 60px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+/* PROCESS CARD */
+
+.processCard {
+  padding: 40px 30px;
+
+  border-radius: 22px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.35)
+  );
+
+  backdrop-filter: blur(20px) saturate(140%);
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.06),
+    0 10px 30px rgba(37, 99, 235, 0.08);
+
+  transition: all 0.35s ease;
+}
+
+.processCard:hover {
+  transform: translateY(-8px);
+}
+
+/* ICON */
+
+.iconBox {
+  width: 56px;
+  height: 56px;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary-light),
+    var(--primary-blue)
+  );
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  font-size: 22px;
+
+  margin: auto;
+  margin-bottom: 18px;
+
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.35);
+}
+
+/* BUTTON */
+
+.consultBtn {
+  margin-top: 50px;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary-light),
+    var(--primary-blue)
+  );
+
+  border: none;
+
+  padding: 15px 30px;
+
+  border-radius: 999px;
+
+  font-weight: 600;
+  color: white;
+
+  cursor: pointer;
+
+  box-shadow: 0 12px 35px rgba(37, 99, 235, 0.35);
+
+  transition: all 0.3s ease;
+}
+
+.consultBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 45px rgba(37, 99, 235, 0.45);
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceCard {
+    flex-direction: column;
+  }
+
+  .serviceImage img {
+    width: 100%;
+    height: 220px;
+  }
+
+  .processGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .servicesSection {
+    padding: 70px 10px;
+  }
+
+  .servicesSection h2 {
+    font-size: 26px;
+  }
+
+  .sectionText {
+    font-size: 15px;
+  }
+
+  .processGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .processSection {
+    padding: 80px 10px;
+  }
+
+  .processText {
+    font-size: 15px;
+  }
+
+  .processCard {
+    padding: 28px;
+  }
+
+  .iconBox {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .consultBtn {
+    padding: 13px 24px;
+    font-size: 14px;
+  }
+}
+
+/* ================= SMALL PHONES ================= */
+
+@media (max-width: 480px) {
+  .servicesSection h2 {
+    font-size: 22px;
+  }
+
+  .sectionText {
+    font-size: 14px;
+  }
+
+  .serviceContent h3 {
+    font-size: 18px;
+  }
+
+  .benefits li {
+    font-size: 13px;
+  }
+
+  .processSection h2 {
+    font-size: 22px;
+  }
+
+  .processText {
+    font-size: 14px;
+  }
+
+  .processCard {
+    padding: 24px;
+  }
+
+  .iconBox {
+    width: 46px;
+    height: 46px;
+    font-size: 18px;
+  }
+
+  .consultBtn {
+    width: 100%;
+    padding: 14px;
+  }
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+
+.serviceCard {
+  grid-template-columns: 1fr;
+  padding: 40px;
+}
+
+.serviceImage img {
+  height: 260px;
+  border-radius: 10px;
+}
+
+}
+
+
+
+@media (max-width: 768px) {
+
+.serviceCard {
+  padding: 32px;
+  gap: 28px;
+}
+
+.serviceContent h3 {
+  font-size: 20px;
+}
+
+.serviceContent p {
+  font-size: 12.5px;
+}
+
+.benefits li {
+  font-size: 11.5px;
+}
+
+}
+
+
+
+@media (max-width: 480px) {
+
+.serviceCard {
+  padding: 26px;
+}
+
+.serviceImage img {
+  height: 220px;
+}
+
+.serviceContent h3 {
+  font-size: 17px;
+}
+
+}

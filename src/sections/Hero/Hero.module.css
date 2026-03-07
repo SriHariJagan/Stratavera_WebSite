@@ -1,0 +1,279 @@
+.hero {
+  position: relative;
+  height: 98vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding-top: 50px;
+
+  border-bottom-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+}
+
+/* ===== Overlay ===== */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    rgba(0, 0, 0, 0.623) 0%,
+    rgba(0, 0, 0, 0.655) 40%,
+    rgba(0, 0, 0, 0.227) 70%,
+    rgba(26, 115, 232, 0.25) 100%
+  );
+
+  backdrop-filter: blur(1px) saturate(100%);
+  -webkit-backdrop-filter: blur(1px) saturate(120%);
+}
+
+/* ===== Container ===== */
+
+.container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 900px;
+  padding: 20px;
+
+  text-align: center;
+  color: white;
+
+  animation: heroFade 1.2s ease forwards;
+}
+
+/* ===== Badge ===== */
+
+.badge {
+  display: inline-block;
+
+  padding: 8px 18px;
+  margin-bottom: 26px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+
+  color: white;
+
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Heading ===== */
+
+.container h1 {
+  font-family: var(--font-heading);
+  color: #b3c7f5;
+
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.15;
+
+  margin-bottom: 22px;
+
+  letter-spacing: -1px;
+
+  animation: heroSlide 1s ease forwards;
+}
+
+/* gradient highlight (optional span) */
+
+.container h1 span {
+  background: linear-gradient(90deg, #60a5fa, #2563eb);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== Paragraph ===== */
+
+.container p {
+  font-family: var(--font-body);
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  max-width: 620px;
+  margin: auto;
+  margin-bottom: 36px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  animation: heroSlide 1.2s ease forwards;
+}
+
+/* ===== Buttons Wrapper ===== */
+
+.buttons {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+
+  animation: heroSlide 1.4s ease forwards;
+}
+
+/* ===== Primary Button ===== */
+
+.primary {
+  background: var(--btn-primary-bg);
+  color: var(--btn-text);
+
+  border: none;
+
+  padding: 15px 34px;
+  border-radius: var(--radius-xl);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+
+  box-shadow: var(--shadow-md);
+}
+
+.primary:hover {
+  background: var(--btn-primary-hover);
+
+  transform: translateY(-4px);
+
+  box-shadow: var(--shadow-lg);
+}
+
+/* ===== Secondary Button ===== */
+
+.secondary {
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: white;
+
+  padding: 15px 34px;
+
+  border-radius: var(--radius-xl);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+}
+
+.secondary:hover {
+  background: rgba(255, 255, 255, 0.16);
+
+  transform: translateY(-4px);
+}
+
+/* ===== Animations ===== */
+
+@keyframes heroFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes heroSlide {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 900px) {
+  .container h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    border-radius: 0;
+    height: 70vh;
+    padding-top: 0;
+  }
+
+  .container h1 {
+    font-size: 42px;
+  }
+
+  .container p {
+    font-size: 16px;
+  }
+
+  /* .buttons{
+    flex-direction:column;
+    gap:14px;
+  } */
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 98vh;
+    padding-top: 80px;
+  }
+
+  .primary,
+  .secondary {
+    padding: 12px 28px;
+    font-size: 12px;
+  }
+
+  .container h1 {
+    font-size: 32px;
+  }
+
+  .container p {
+    font-size: 15px;
+  }
+
+  .badge {
+    font-size: 12px;
+  }
+
+  .buttons{
+    flex-direction:column;
+    gap: 18px;
+    width: 70%;
+    margin: auto;
+  }
+}
+
+
+@media (max-width: 320px) {
+  .hero {
+    height: 100vh;
+  }
+ .buttons{
+  width: 95%;
+ }
+}
