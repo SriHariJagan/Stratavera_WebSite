@@ -4,8 +4,15 @@ import { FaCheckCircle } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
 import homeImg from "/Images/heroImg.avif";
-import officeImg from "/Images/services/1.jpg";
 import PageHero from "../../components/PageHero/PageHero";
+import project1 from "/Images/services/project.jpg";
+import project2 from "/Images/services/project.jpg";
+import project3 from "/Images/services/project.jpg";
+import project4 from "/Images/services/project.jpg";
+import project5 from "/Images/services/project.jpg";
+import project6 from "/Images/services/project.jpg";
+import project7 from "/Images/services/project.jpg";
+
 
 /* ---------------- ANIMATION VARIANTS ---------------- */
 
@@ -58,34 +65,99 @@ const cardAnimation = {
 const Projects = () => {
   const [filter, setFilter] = useState("all");
 
-  const projects = [
-    {
-      title: "Modern Home",
-      description:
-        "2,800 sq. ft. residential build with outdoor living space and energy-efficient upgrades.",
-      image: homeImg,
-      type: "Residential",
-      status: "completed",
-      highlights: [
-        "Completed in 6 months",
-        "$450K budget",
-        "Energy rating: 5-star"
-      ]
-    },
-    {
-      title: "Office Hub",
-      description:
-        "6,000 sq. ft. two-story office space with conference rooms and ADA compliance.",
-      image: officeImg,
-      type: "Commercial",
-      status: "upcoming",
-      highlights: [
-        "Completed in 9 months",
-        "20-person capacity",
-        "Delivered 3 weeks early"
-      ]
-    }
-  ];
+const projects = [
+  {
+    title: "Integrated Bus Terminal, Metro Manila",
+    description:
+      "Feasibility and transaction advisory for development of Integrated Bus Terminals in Metro Manila for provincial buses.",
+    image: project1,
+    type: "Transport Infrastructure",
+    status: "completed",
+    highlights: [
+      "Feasibility Study",
+      "Transaction Advisory",
+      "Metro Manila, Philippines"
+    ]
+  },
+  {
+    title: "Agra Lucknow Expressway",
+    description:
+      "Feasibility and transaction advisory for development of 302 km access-controlled expressway in Uttar Pradesh, India.",
+    image: project2,
+    type: "Expressway Infrastructure",
+    status: "completed",
+    highlights: [
+      "302 km Expressway",
+      "Uttar Pradesh, India",
+      "Financial & Transaction Advisory"
+    ]
+  },
+  {
+    title: "Hyderabad Metro Bid Advisory",
+    description:
+      "Assessment of capital and operational costs with development of a financial model to determine the optimal bid price.",
+    image: project3,
+    type: "Metro Rail",
+    status: "completed",
+    highlights: [
+      "Bid Advisory",
+      "Financial Modeling",
+      "Cost Assessment"
+    ]
+  },
+  {
+    title: "Waterways Business Plan, West Bengal",
+    description:
+      "Spatial study and development of a sustainable business plan for waterways in West Bengal, India.",
+    image: project4,
+    type: "Water Transport",
+    status: "completed",
+    highlights: [
+      "Spatial Study",
+      "Business Plan Development",
+      "West Bengal, India"
+    ]
+  },
+  {
+    title: "Krishnapatnam Port Cargo Market Analysis",
+    description:
+      "Market analysis for assessing cargo potential and future growth opportunities at Krishnapatnam Port in India.",
+    image: project5,
+    type: "Port Infrastructure",
+    status: "completed",
+    highlights: [
+      "Cargo Market Analysis",
+      "Port Development",
+      "India"
+    ]
+  },
+  {
+    title: "MOPA Airport Traffic Assessment, Goa",
+    description:
+      "Assessment of traffic potential and passenger demand forecasting for MOPA Airport in Goa.",
+    image: project6,
+    type: "Airport Infrastructure",
+    status: "completed",
+    highlights: [
+      "Traffic Demand Forecast",
+      "Airport Planning",
+      "Goa, India"
+    ]
+  },
+  {
+    title: "Delhi Metro Phase II Financing Strategy",
+    description:
+      "Development of a sustainable financing strategy for Phase II expansion of Delhi Metro.",
+    image: project7,
+    type: "Metro Rail",
+    status: "completed",
+    highlights: [
+      "Financing Strategy",
+      "Metro Expansion",
+      "Delhi, India"
+    ]
+  }
+];
 
   const filtered =
     filter === "all"

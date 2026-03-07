@@ -1,30 +1,43 @@
 import React from "react";
 import styles from "./ServicesSection.module.css";
-import { Home, Building2, Wrench } from "lucide-react";
-import { motion } from "framer-motion";
+import { FileText, Network, ClipboardList, DollarSign, Gavel } from "lucide-react";import { motion } from "framer-motion";
 
 import img1 from "/Images/services/1.jpg";
 import img2 from "/Images/services/1.jpg";
 import img3 from "/Images/services/1.jpg";
+import img4 from "/Images/services/1.jpg";
+import img5 from "/Images/services/1.jpg";
 
 const services = [
   {
     image: img1,
-    icon: <Home size={30} />,
-    title: "Residential Construction",
-    desc: "We design and build modern homes with strong foundations, elegant architecture, and long-lasting quality.",
+    icon: <FileText size={30} />,
+    title: "Feasibility Studies & DPRs",
+    desc: "Comprehensive feasibility studies and Detailed Project Reports (DPRs) to evaluate project viability, costs, risks, and long-term sustainability.",
   },
   {
     image: img2,
-    icon: <Building2 size={30} />,
-    title: "Commercial Projects",
-    desc: "From office spaces to commercial complexes, we deliver smart, scalable buildings tailored for business growth.",
+    icon: <Network size={30} />,
+    title: "Project Structuring & PPP Advisory",
+    desc: "Strategic project structuring and Public-Private Partnership (PPP) advisory to ensure efficient collaboration, compliance, and financial feasibility.",
   },
   {
     image: img3,
-    icon: <Wrench size={30} />,
-    title: "Renovation & Remodeling",
-    desc: "Upgrade existing homes and buildings with modern design, improved functionality, and premium finishes.",
+    icon: <ClipboardList size={30} />,
+    title: "Project Management Consultancy",
+    desc: "End-to-end project management services ensuring timely delivery, quality control, cost management, and seamless coordination between stakeholders.",
+  },
+  {
+    image: img4,
+    icon: <DollarSign size={30} />,
+    title: "Financing Strategy",
+    desc: "Expert guidance in developing financing strategies, identifying funding sources, and structuring financial models for successful project execution.",
+  },
+  {
+    image: img5,
+    icon: <Gavel size={30} />,
+    title: "Bid Process Management",
+    desc: "Professional bid management services including tender preparation, evaluation, documentation, and transparent procurement support.",
   },
 ];
 
