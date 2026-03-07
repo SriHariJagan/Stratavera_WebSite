@@ -591,6 +591,9 @@
 /* ================= SMALL PHONES ================= */
 
 @media (max-width:480px){
+  .statsSection, .values{
+    padding: 40px 3%;
+  }
 
 .statsHeader h2{
   font-size:24px;

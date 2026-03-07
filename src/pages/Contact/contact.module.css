@@ -168,11 +168,13 @@ textarea:focus {
 }
 
 @media (max-width: 600px) {
+  .contactSection {
+    padding: 80px 3%;
+  }
 
-    .contactSection{
-        padding: 80px 3%;
-    }
-
+  .form {
+    padding: 30px 15px;
+  }
 
   .infoGrid {
     grid-template-columns: 1fr;

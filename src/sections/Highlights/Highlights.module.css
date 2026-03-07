@@ -139,6 +139,10 @@
   .container {
     grid-template-columns: 1fr;
   }
+
+  .section{
+    padding-inline: 3%;
+  }
 }
 
 @media (max-width: 350px) {

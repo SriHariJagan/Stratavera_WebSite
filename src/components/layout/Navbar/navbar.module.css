@@ -296,12 +296,14 @@
 .closeBtn {
   align-self: flex-end;
 
-  background: #483fa5d3;
+  background: #8bbbfa80;
   border: none;
 
   cursor: pointer;
+  color: #090163;
 
-  border: 1px solid #4338ca;
+  border: 1px solid #a4dbed;
+  box-shadow: 0 0 10px 1px rgba(0, 225, 255, 0.332);
   border-radius: 50%;
   padding: 5px 10px;
   padding-top: 9px;
@@ -328,7 +330,6 @@
 
   .mobileBtn {
     display: block;
-    margin-top: 8px;
   }
 }
 

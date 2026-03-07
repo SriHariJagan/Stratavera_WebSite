@@ -189,8 +189,12 @@
 
 @media (max-width: 480px) {
 
+  .curve {
+    display: none;
+  }
+
   .hero {
-    height: 80vh;
+    height: 65vh;
   }
 
   .title {
