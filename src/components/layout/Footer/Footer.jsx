@@ -8,46 +8,48 @@ import {
   Twitter,
   Phone,
   Mail,
-  MapPin
+  MapPin,
 } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-
       {/* CTA SECTION */}
       <div className={styles.cta}>
         <div className={styles.ctaContent}>
-
           <div className={styles.ctaLeft}>
-            <span className={styles.small}>START YOUR CONSTRUCTION PROJECT</span>
-            <h2>Building the Future,<br/>Together</h2>
+            <span className={styles.small}>
+              START YOUR CONSTRUCTION PROJECT
+            </span>
+            <h2>
+              Building the Future,
+              <br />
+              Together
+            </h2>
           </div>
 
           <div className={styles.ctaRight}>
             <p>
-              We transform ideas into strong and elegant structures. 
-              Let our expert team bring your residential or commercial
-              project to life with precision and quality.
+              We transform ideas into strong and elegant structures. Let our
+              expert team bring your residential or commercial project to life
+              with precision and quality.
             </p>
 
             <button className={styles.ctaBtn}>GET A FREE CONSULTATION</button>
           </div>
-
         </div>
       </div>
 
       {/* FOOTER CONTENT */}
       <div className={styles.footerContent}>
-
         {/* BRAND */}
         <div className={styles.brand}>
           <h3>BuildCraft</h3>
 
           <p>
-            BuildCraft is a modern construction company delivering
-            high-quality residential, commercial, and infrastructure
-            projects with reliability, innovation, and excellence.
+            BuildCraft is a modern construction company delivering high-quality
+            residential, commercial, and infrastructure projects with
+            reliability, innovation, and excellence.
           </p>
 
           <div className={styles.socials}>
@@ -71,10 +73,24 @@ const Footer = () => {
         {/* SERVICES */}
         <div className={styles.links}>
           <h4>Services</h4>
-          <Link to="/services/residential">Residential Construction</Link>
-          <Link to="/services/commercial">Commercial Projects</Link>
-          <Link to="/services/architecture">Architecture Design</Link>
-          <Link to="/services/interior">Interior Solutions</Link>
+
+          <Link to="/services/feasibility-dprs">
+            Feasibility Studies & DPRs
+          </Link>
+
+          <Link to="/services/project-structuring-ppp-advisory">
+            Project Structuring & PPP Advisory
+          </Link>
+
+          <Link to="/services/project-management-consultancy">
+            Project Management Consultancy
+          </Link>
+
+          <Link to="/services/financing-strategy">Financing Strategy</Link>
+
+          <Link to="/services/bid-process-management">
+            Bid Process Management
+          </Link>
         </div>
 
         {/* CONTACT */}
@@ -82,33 +98,30 @@ const Footer = () => {
           <h4>Contact Us</h4>
 
           <div className={styles.contactItem}>
-            <Phone size={35}/>
+            <Phone size={35} />
             <div>
               <span>Call Us</span>
-              <p>+91 98765 43210</p>
+              <p>+91 9810417398</p>
             </div>
           </div>
 
           <div className={styles.contactItem}>
-            <Mail size={35}/>
+            <Mail size={35} />
             <div>
               <span>Email</span>
-              <p>info@buildcraft.com</p>
+              <p>mohit.sinha@stratavera.in</p>
             </div>
           </div>
 
           <div className={styles.contactItem}>
-            <MapPin size={35}/>
+            <MapPin size={35} />
             <div>
               <span>Office</span>
-              <p>Visakhapatnam, Andhra Pradesh, India</p>
+              <p>Gurugram, India</p>
             </div>
           </div>
-
         </div>
-
       </div>
-
     </footer>
   );
 };
