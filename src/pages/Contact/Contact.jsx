@@ -111,19 +111,19 @@ export default function Contact() {
             <motion.div variants={fadeUp} className={styles.infoCard}>
               <FaMapMarkerAlt />
               <h4>Address</h4>
-              <p>Chicago Heights, TX 60411</p>
+              <p>Gurugram, India</p>
             </motion.div>
 
             <motion.div variants={fadeUp} className={styles.infoCard}>
               <FaEnvelope />
               <h4>Send Email</h4>
-              <p>info@company.com</p>
+              <p>mohit.sinha@stratavera.in</p>
             </motion.div>
 
             <motion.div variants={fadeUp} className={styles.infoCard}>
               <FaPhoneAlt />
               <h4>Call Us</h4>
-              <p>+888 (246) 642-2710</p>
+              <p>+91 9810417398</p>
             </motion.div>
 
             <motion.div variants={fadeUp} className={styles.infoCard}>
