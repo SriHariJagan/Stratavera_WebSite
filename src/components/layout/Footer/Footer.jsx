@@ -44,7 +44,7 @@ const Footer = () => {
       <div className={styles.footerContent}>
         {/* BRAND */}
         <div className={styles.brand}>
-          <h3>BuildCraft</h3>
+          <h3><img src="/Images/logo.png" alt="logo" width={200}/></h3>
 
           <p>
             BuildCraft is a modern construction company delivering high-quality
@@ -121,6 +121,13 @@ const Footer = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className={styles.copyright}>
+        <span>
+          © {new Date().getFullYear()} BuildCraft. All rights reserved.
+        </span>
+        <span>Designed & Developed with Precision</span>
       </div>
     </footer>
   );

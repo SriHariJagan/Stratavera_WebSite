@@ -229,6 +229,10 @@
   margin-bottom: 16px;
 }
 
+.brand img{
+  filter: contrast(2.5);
+}
+ 
 .brand p {
   color: rgba(230, 240, 255, 0.75);
 
@@ -409,6 +413,10 @@
 }
 
 @media (max-width: 480px) {
+  .copyright{
+    display: inline-block;
+    text-align: center;
+  }
   .footerContent {
     grid-template-columns: 1fr;
   }
@@ -442,4 +450,26 @@
   .links a:hover {
     background-size: 100% 2px;
   }
+
+  .contact{
+    margin: auto;
+  }
+
+  .contact h4{
+    text-align: center;
+  }
+
+  .contactItem{
+    display: flex;
+    align-items: center;
+  }
+
+  .brand{
+    text-align: center;
+  }
+
+  .socials{
+    justify-content: center;
+  }
+
 }
