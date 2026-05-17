@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" color="#0B1F3A" role="img" aria-label="Stratavera Partners">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+      .word { font-family: 'Inter', -apple-system, system-ui, sans-serif; font-weight: 700; fill: currentColor; letter-spacing: 0.005em; }
+      .tag  { font-family: 'Inter', -apple-system, system-ui, sans-serif; font-weight: 500; fill: currentColor; opacity: 0.62; letter-spacing: 0.32em; }
+    </style>
+  </defs>
+
+  <!-- MARK: stratified column / pillar (varying widths centered) -->
+  <g transform="translate(60, 24)" fill="currentColor">
+    <!-- capital -->
+    <rect x="0"  y="0"   width="120" height="14"/>
+    <!-- shaft strata of varying widths -->
+    <rect x="24" y="22"  width="72"  height="10"/>
+    <rect x="14" y="38"  width="92"  height="10"/>
+    <rect x="24" y="54"  width="72"  height="10"/>
+    <rect x="14" y="70"  width="92"  height="10"/>
+    <rect x="24" y="86"  width="72"  height="10"/>
+    <rect x="14" y="102" width="92"  height="10"/>
+    <rect x="24" y="118" width="72"  height="10"/>
+    <rect x="14" y="134" width="92"  height="10"/>
+    <!-- base -->
+    <rect x="0"  y="156" width="120" height="14"/>
+  </g>
+
+  <line x1="240" y1="56" x2="240" y2="164" stroke="currentColor" stroke-width="1" opacity="0.18"/>
+
+  <text x="270" y="122" class="word" font-size="58">STRATAVERA</text>
+  <text x="272" y="156" class="tag" font-size="17">PARTNERS</text>
+</svg>

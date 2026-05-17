@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 170" color="#0B1F3A" role="img" aria-label="Stratavera mark — column">
+  <g fill="currentColor">
+    <rect x="0"  y="0"   width="120" height="14"/>
+    <rect x="24" y="22"  width="72"  height="10"/>
+    <rect x="14" y="38"  width="92"  height="10"/>
+    <rect x="24" y="54"  width="72"  height="10"/>
+    <rect x="14" y="70"  width="92"  height="10"/>
+    <rect x="24" y="86"  width="72"  height="10"/>
+    <rect x="14" y="102" width="92"  height="10"/>
+    <rect x="24" y="118" width="72"  height="10"/>
+    <rect x="14" y="134" width="92"  height="10"/>
+    <rect x="0"  y="156" width="120" height="14"/>
+  </g>
+</svg>

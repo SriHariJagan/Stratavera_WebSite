@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stratavera — Logo Concepts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy-900: #061325;
+      --navy-800: #0B1F3A;
+      --navy-700: #112B4F;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748B;
+      --slate-300: #CBD5E1;
+      --slate-200: #E2E8F0;
+      --slate-100: #F1F5F9;
+      --slate-50:  #F8FAFC;
+      --line: #E5E7EB;
+      --bg: #FFFFFF;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, sans-serif;
+      color: #1F2937;
+      background: var(--slate-50);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    header.page {
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+      padding: 56px 0 40px;
+    }
+    header.page h1 {
+      font-size: 2.4rem;
+      letter-spacing: -0.02em;
+      margin: 0 0 12px;
+      color: #0F172A;
+    }
+    header.page p { color: var(--slate-600); max-width: 720px; margin: 0; font-size: 1.05rem; }
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--navy-800);
+      margin-bottom: 14px;
+    }
+
+    /* Concept block */
+    .concept {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 48px;
+      margin: 40px 0;
+      overflow: hidden;
+    }
+    .concept-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .concept-head h2 {
+      margin: 0;
+      font-size: 1.55rem;
+      letter-spacing: -0.015em;
+      color: #0F172A;
+    }
+    .concept-head .badge {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--slate-600);
+      background: var(--slate-100);
+      padding: 6px 12px;
+      border-radius: 999px;
+    }
+    .rationale {
+      color: var(--slate-700);
+      max-width: 840px;
+      margin-bottom: 32px;
+    }
+    .rationale strong { color: #0F172A; }
+
+    /* Showcase rows */
+    .showcase {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      margin-bottom: 24px;
+    }
+    .panel {
+      padding: 56px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+    }
+    .panel.light { background: #FFFFFF;        color: var(--navy-800); }
+    .panel.dark  { background: var(--navy-900); color: #FFFFFF; }
+    .panel.tint  { background: var(--slate-100); color: var(--navy-800); }
+    .panel svg { display: block; max-width: 100%; height: auto; max-height: 130px; }
+
+    .label-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+      font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--slate-500); margin-bottom: 8px;
+    }
+
+    /* Size scaling row */
+    .sizes {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+    .size-cell {
+      padding: 32px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      background: #fff;
+      border-right: 1px solid var(--line);
+      color: var(--navy-800);
+      min-height: 150px;
+    }
+    .size-cell:last-child { border-right: none; }
+    .size-cell .small  { width: 28px; height: auto; }
+    .size-cell .medium { width: 64px; height: auto; }
+    .size-cell .large  { width: 100px; height: auto; }
+    .size-cell.with-wordmark .small  { width: 120px; }
+    .size-cell.with-wordmark .medium { width: 220px; }
+    .size-cell.with-wordmark .large  { width: 360px; }
+    .size-cell .cap {
+      font-size: 0.72rem; color: var(--slate-500);
+      letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600;
+    }
+
+    /* Final compare grid */
+    .compare {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      padding: 48px 0;
+    }
+    .compare-cell {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 180px;
+      color: var(--navy-800);
+    }
+    .compare-cell svg { width: 100%; max-width: 380px; height: auto; }
+
+    /* Section divider */
+    .section { padding: 48px 0; }
+    .section h2 {
+      font-size: 1.7rem; letter-spacing: -0.015em; margin: 0 0 8px; color: #0F172A;
+    }
+    .section .lead { color: var(--slate-600); max-width: 720px; margin: 0 0 32px; }
+
+    /* Footer note */
+    footer.note {
+      padding: 32px 0 64px;
+      color: var(--slate-500);
+      font-size: 0.92rem;
+      border-top: 1px solid var(--line);
+      background: #fff;
+    }
+    footer.note p { max-width: 880px; }
+
+    @media (max-width: 720px) {
+      .showcase, .compare { grid-template-columns: 1fr; }
+      .sizes { grid-template-columns: 1fr; }
+      .size-cell { border-right: none; border-bottom: 1px solid var(--line); }
+      .panel { padding: 40px 24px; }
+      .concept { padding: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="page">
+  <div class="container">
+    <span class="eyebrow">Logo Exploration</span>
+    <h1>Stratavera Partners — four concepts.</h1>
+    <p>Four monochrome, strata-led directions for a new identity. Each draws on the "layered strategy" idea behind the name (Strategy + Veracity), in a sober institutional palette consistent with the website. Pick a direction; the chosen one will get fully built out into a brand kit.</p>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- ============================================================
+       FINAL COMPARE — top-of-page summary
+       ============================================================ -->
+  <section class="section">
+    <h2>Side by side.</h2>
+    <p class="lead">All four concepts at the same scale, on white, for direct comparison.</p>
+    <div class="compare">
+      <div class="compare-cell">
+        <!-- Concept 1: Stratum (ascending stair) -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" style="color:#0B1F3A;">
+          <g transform="translate(40, 40)" fill="currentColor">
+            <rect x="0"   y="116" width="68" height="14"/>
+            <rect x="22"  y="87"  width="68" height="14"/>
+            <rect x="44"  y="58"  width="68" height="14"/>
+            <rect x="66"  y="29"  width="68" height="14"/>
+            <rect x="88"  y="0"   width="68" height="14"/>
+          </g>
+          <line x1="246" y1="56" x2="246" y2="164" stroke="currentColor" stroke-width="1" opacity="0.18"/>
+          <text x="276" y="122" font-family="Inter, sans-serif" font-weight="700" font-size="58" fill="currentColor" letter-spacing="0.005em">STRATAVERA</text>
+          <text x="278" y="156" font-family="Inter, sans-serif" font-weight="500" font-size="17" fill="currentColor" opacity="0.62" letter-spacing="0.32em">PARTNERS</text>
+        </svg>
+      </div>
+      <div class="compare-cell">
+        <!-- Concept 2: Apex -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" style="color:#0B1F3A;">
+          <g transform="translate(50, 40)" fill="currentColor">
+            <rect x="62" y="0"   width="16"  height="14"/>
+            <rect x="48" y="29"  width="44"  height="14"/>
+            <rect x="34" y="58"  width="72"  height="14"/>
+            <rect x="20" y="87"  width="100" height="14"/>
+            <rect x="0"  y="116" width="140" height="14"/>
+          </g>
+          <line x1="246" y1="56" x2="246" y2="164" stroke="currentColor" stroke-width="1" opacity="0.18"/>
+          <text x="276" y="122" font-family="Inter, sans-serif" font-weight="700" font-size="58" fill="currentColor" letter-spacing="0.005em">STRATAVERA</text>
+          <text x="278" y="156" font-family="Inter, sans-serif" font-weight="500" font-size="17" fill="currentColor" opacity="0.62" letter-spacing="0.32em">PARTNERS</text>
+        </svg>
+      </div>
+      <div class="compare-cell">
+        <!-- Concept 3: Column -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" style="color:#0B1F3A;">
+          <g transform="translate(60, 24)" fill="currentColor">
+            <rect x="0"  y="0"   width="120" height="14"/>
+            <rect x="24" y="22"  width="72"  height="10"/>
+            <rect x="14" y="38"  width="92"  height="10"/>
+            <rect x="24" y="54"  width="72"  height="10"/>
+            <rect x="14" y="70"  width="92"  height="10"/>
+            <rect x="24" y="86"  width="72"  height="10"/>
+            <rect x="14" y="102" width="92"  height="10"/>
+            <rect x="24" y="118" width="72"  height="10"/>
+            <rect x="14" y="134" width="92"  height="10"/>
+            <rect x="0"  y="156" width="120" height="14"/>
+          </g>
+          <line x1="240" y1="56" x2="240" y2="164" stroke="currentColor" stroke-width="1" opacity="0.18"/>
+          <text x="270" y="122" font-family="Inter, sans-serif" font-weight="700" font-size="58" fill="currentColor" letter-spacing="0.005em">STRATAVERA</text>
+          <text x="272" y="156" font-family="Inter, sans-serif" font-weight="500" font-size="17" fill="currentColor" opacity="0.62" letter-spacing="0.32em">PARTNERS</text>
+        </svg>
+      </div>
+      <div class="compare-cell">
+        <!-- Concept 4: Wordmark -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" style="color:#0B1F3A;">
+          <text x="360" y="100" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="72" fill="currentColor" letter-spacing="0.012em">STRATAVERA</text>
+          <g transform="translate(360, 130)" fill="currentColor">
+            <rect x="-58" y="0"  width="116" height="3"/>
+            <rect x="-30" y="9"  width="60"  height="3"/>
+            <rect x="-12" y="18" width="24"  height="3"/>
+          </g>
+          <text x="360" y="184" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="17" fill="currentColor" opacity="0.6" letter-spacing="0.42em">PARTNERS</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONCEPT 1 — STRATUM
+       ============================================================ -->
+  <article class="concept">
+    <div class="concept-head">
+      <h2>Concept 1 · Stratum</h2>
+      <span class="badge">Ascending strata</span>
+    </div>
+    <p class="rationale">
+      <strong>The idea:</strong> five horizontal bars, each shifted up and to the right, forming an ascending staircase. Reads simultaneously as <em>geological strata</em> (the sediment of accumulated experience) and as <em>strategic ascent</em> (the work moving forward through layers). Most visually distinctive of the four — the silhouette is unique enough to be recognised at a glance.
+    </p>
+    <p class="rationale" style="margin-bottom: 36px;">
+      <strong>Tone:</strong> confident, modern, momentum-forward. Best for an Indian/emerging-markets audience that wants a firm that feels current.
+    </p>
+
+    <div class="label-row"><div>On white</div><div>On navy</div></div>
+    <div class="showcase">
+      <div class="panel light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" style="color:#0B1F3A;">
+          <g transform="translate(40, 40)" fill="currentColor">
+            <rect x="0"   y="116" width="68" height="14"/>
+            <rect x="22"  y="87"  width="68" height="14"/>
+            <rect x="44"  y="58"  width="68" height="14"/>
+            <rect x="66"  y="29"  width="68" height="14"/>
+            <rect x="88"  y="0"   width="68" height="14"/>
+          </g>
+          <line x1="246" y1="56" x2="246" y2="164" stroke="currentColor" stroke-width="1" opacity="0.18"/>
+          <text x="276" y="122" font-family="Inter, sans-serif" font-weight="700" font-size="58" fill="currentColor" letter-spacing="0.005em">STRATAVERA</text>
+          <text x="278" y="156" font-family="Inter, sans-serif" font-weight="500" font-size="17" fill="currentColor" opacity="0.62" letter-spacing="0.32em">PARTNERS</text>
+        </svg>
+      </div>
+      <div class="panel dark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" style="color:#FFFFFF;">
+          <g transform="translate(40, 40)" fill="currentColor">
+            <rect x="0"   y="116" width="68" height="14"/>
+            <rect x="22"  y="87"  width="68" height="14"/>
+            <rect x="44"  y="58"  width="68" height="14"/>
+            <rect x="66"  y="29"  width="68" height="14"/>
+            <rect x="88"  y="0"   width="68" height="14"/>
+          </g>
+          <line x1="246" y1="56" x2="246" y2="164" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+          <text x="276" y="122" font-family="Inter, sans-serif" font-weight="700" font-size="58" fill="currentColor" letter-spacing="0.005em">STRATAVERA</text>
+          <text x="278" y="156" font-family="Inter, sans-serif" font-weight="500" font-size="17" fill="currentColor" opacity="0.7" letter-spacing="0.32em">PARTNERS</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="label-row" style="grid-template-columns: 1fr 1fr 1fr;">
+      <div>Mark — favicon (28px)</div><div>Mark — app icon (64px)</div><div>Mark — large (100px)</div>
+    </div>
+    <div class="sizes">
+      <div class="size-cell">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 156 130" class="small" style="color:#0B1F3A;">
+          <g fill="currentColor">
+            <rect x="0"   y="116" width="68" height="14"/>
+            <rect x="22"  y="87"  width="68" height="14"/>
+            <rect x="44"  y="58"  width="68" height="14"/>
+            <rect x="66"  y="29"  width="68" height="14"/>
+            <rect x="88"  y="0"   width="68" height="14"/>
+          </g>
+        </svg>
+        <span class="cap">28px</span>
+      </div>
+      <div class="size-cell">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 156 130" class="medium" style="color:#0B1F3A;">
+          <g fill="currentColor">
+            <rect x="0"   y="116" width="68" height="14"/>
+            <rect x="22"  y="87"  width="68" height="14"/>
+            <rect x="44"  y="58"  width="68" height="14"/>
+            <rect x="66"  y="29"  width="68" height="14"/>
+            <rect x="88"  y="0"   width="68" height="14"/>
+          </g>
+        </svg>
+        <span class="cap">64px</span>
+      </div>
+      <div class="size-cell">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 156 130" class="large" style="color:#0B1F3A;">
+          <g fill="currentColor">
+            <rect x="0"   y="116" width="68" height="14"/>
+            <rect x="22"  y="87"  width="68" height="14"/>
+            <rect x="44"  y="58"  width="68" height="14"/>
+            <rect x="66"  y="29"  width="68" height="14"/>
+            <rect x="88"  y="0"   width="68" height="14"/>
+          </g>
+        </svg>
+        <span class="cap">100px</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ============================================================
+       CONCEPT 2 — APEX
+       ============================================================ -->
+  <article class="concept">
+    <div class="concept-head">
+      <h2>Concept 2 · Apex</h2>
+      <span class="badge">Strategic peak</span>
+    </div>
+    <p class="rationale">
+      <strong>The idea:</strong> five centred horizontal bars of decreasing length, building from a wide foundation to a single point. Reads literally as <em>strategy emerging from depth</em> — every layer of the foundation contributes to the apex. The shape also evokes mountain, achievement and direction.
+    </p>
+    <p class="rationale" style="margin-bottom: 36px;">
+      <strong>Tone:</strong> classical, considered, slightly more conservative. Strong fit if the firm wants to telegraph stability and seniority above novelty.
+    </p>
+
+    <div class="label-row"><div>On white</div><div>On navy</div></div>
+    <div class="showcase">
+      <div class="panel light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" style="color:#0B1F3A;">
+          <g transform="translate(50, 40)" fill="currentColor">
+            <rect x="62" y="0"   width="16"  height="14"/>
+            <rect x="48" y="29"  width="44"  height="14"/>
+            <rect x="34" y="58"  width="72"  height="14"/>
+            <rect x="20" y="87"  width="100" height="14"/>
+            <rect x="0"  y="116" width="140" height="14"/>
+          </g>
+          <line x1="246" y1="56" x2="246" y2="164" stroke="currentColor" stroke-width="1" opacity="0.18"/>
+          <text x="276" y="122" font-family="Inter, sans-serif" font-weight="700" font-size="58" fill="currentColor" letter-spacing="0.005em">STRATAVERA</text>
+          <text x="278" y="156" font-family="Inter, sans-serif" font-weight="500" font-size="17" fill="currentColor" opacity="0.62" letter-spacing="0.32em">PARTNERS</text>
+        </svg>
+      </div>
+      <div class="panel dark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" style="color:#FFFFFF;">
+          <g transform="translate(50, 40)" fill="currentColor">
+            <rect x="62" y="0"   width="16"  height="14"/>
+            <rect x="48" y="29"  width="44"  height="14"/>
+            <rect x="34" y="58"  width="72"  height="14"/>
+            <rect x="20" y="87"  width="100" height="14"/>
+            <rect x="0"  y="116" width="140" height="14"/>
+          </g>
+          <line x1="246" y1="56" x2="246" y2="164" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+          <text x="276" y="122" font-family="Inter, sans-serif" font-weight="700" font-size="58" fill="currentColor" letter-spacing="0.005em">STRATAVERA</text>
+          <text x="278" y="156" font-family="Inter, sans-serif" font-weight="500" font-size="17" fill="currentColor" opacity="0.7" letter-spacing="0.32em">PARTNERS</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="label-row" style="grid-template-columns: 1fr 1fr 1fr;">
+      <div>Mark — favicon (28px)</div><div>Mark — app icon (64px)</div><div>Mark — large (100px)</div>
+    </div>
+    <div class="sizes">
+      <div class="size-cell">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 130" class="small" style="color:#0B1F3A;">
+          <g fill="currentColor">
+            <rect x="62" y="0"   width="16"  height="14"/>
+            <rect x="48" y="29"  width="44"  height="14"/>
+            <rect x="34" y="58"  width="72"  height="14"/>
+            <rect x="20" y="87"  width="100" height="14"/>
+            <rect x="0"  y="116" width="140" height="14"/>
+          </g>
+        </svg>
+        <span class="cap">28px</span>
+      </div>
+      <div class="size-cell">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 130" class="medium" style="color:#0B1F3A;">
+          <g fill="currentColor">
+            <rect x="62" y="0"   width="16"  height="14"/>
+            <rect x="48" y="29"  width="44"  height="14"/>
+            <rect x="34" y="58"  width="72"  height="14"/>
+            <rect x="20" y="87"  width="100" height="14"/>
+            <rect x="0"  y="116" width="140" height="14"/>
+          </g>
+        </svg>
+        <span class="cap">64px</span>
+      </div>
+      <div class="size-cell">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 130" class="large" style="color:#0B1F3A;">
+          <g fill="currentColor">
+            <rect x="62" y="0"   width="16"  height="14"/>
+            <rect x="48" y="29"  width="44"  height="14"/>
+            <rect x="34" y="58"  width="72"  height="14"/>
+            <rect x="20" y="87"  width="100" height="14"/>
+            <rect x="0"  y="116" width="140" height="14"/>
+          </g>
+        </svg>
+        <span class="cap">100px</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ============================================================
+       CONCEPT 3 — COLUMN
+       ============================================================ -->
+  <article class="concept">
+    <div class="concept-head">
+      <h2>Concept 3 · Column</h2>
+      <span class="badge">Stratified pillar</span>
+    </div>
+    <p class="rationale">
+      <strong>The idea:</strong> a vertical pillar made of stacked horizontal strata of alternating widths, capped by a base and capital. Reads as <em>architectural cross-section</em> — directly linking to the infrastructure sector — and also as <em>fluted classical column</em> (stability, institutional weight). The most explicitly "infrastructure" of the four marks.
+    </p>
+    <p class="rationale" style="margin-bottom: 36px;">
+      <strong>Tone:</strong> the most institutional / authoritative. Natural fit if Stratavera will work primarily with sovereign clients, multilaterals and large developers where gravitas matters more than energy.
+    </p>
+
+    <div class="label-row"><div>On white</div><div>On navy</div></div>
+    <div class="showcase">
+      <div class="panel light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" style="color:#0B1F3A;">
+          <g transform="translate(60, 24)" fill="currentColor">
+            <rect x="0"  y="0"   width="120" height="14"/>
+            <rect x="24" y="22"  width="72"  height="10"/>
+            <rect x="14" y="38"  width="92"  height="10"/>
+            <rect x="24" y="54"  width="72"  height="10"/>
+            <rect x="14" y="70"  width="92"  height="10"/>
+            <rect x="24" y="86"  width="72"  height="10"/>
+            <rect x="14" y="102" width="92"  height="10"/>
+            <rect x="24" y="118" width="72"  height="10"/>
+            <rect x="14" y="134" width="92"  height="10"/>
+            <rect x="0"  y="156" width="120" height="14"/>
+          </g>
+          <line x1="240" y1="56" x2="240" y2="164" stroke="currentColor" stroke-width="1" opacity="0.18"/>
+          <text x="270" y="122" font-family="Inter, sans-serif" font-weight="700" font-size="58" fill="currentColor" letter-spacing="0.005em">STRATAVERA</text>
+          <text x="272" y="156" font-family="Inter, sans-serif" font-weight="500" font-size="17" fill="currentColor" opacity="0.62" letter-spacing="0.32em">PARTNERS</text>
+        </svg>
+      </div>
+      <div class="panel dark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" style="color:#FFFFFF;">
+          <g transform="translate(60, 24)" fill="currentColor">
+            <rect x="0"  y="0"   width="120" height="14"/>
+            <rect x="24" y="22"  width="72"  height="10"/>
+            <rect x="14" y="38"  width="92"  height="10"/>
+            <rect x="24" y="54"  width="72"  height="10"/>
+            <rect x="14" y="70"  width="92"  height="10"/>
+            <rect x="24" y="86"  width="72"  height="10"/>
+            <rect x="14" y="102" width="92"  height="10"/>
+            <rect x="24" y="118" width="72"  height="10"/>
+            <rect x="14" y="134" width="92"  height="10"/>
+            <rect x="0"  y="156" width="120" height="14"/>
+          </g>
+          <line x1="240" y1="56" x2="240" y2="164" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+          <text x="270" y="122" font-family="Inter, sans-serif" font-weight="700" font-size="58" fill="currentColor" letter-spacing="0.005em">STRATAVERA</text>
+          <text x="272" y="156" font-family="Inter, sans-serif" font-weight="500" font-size="17" fill="currentColor" opacity="0.7" letter-spacing="0.32em">PARTNERS</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="label-row" style="grid-template-columns: 1fr 1fr 1fr;">
+      <div>Mark — favicon (28px)</div><div>Mark — app icon (64px)</div><div>Mark — large (100px)</div>
+    </div>
+    <div class="sizes">
+      <div class="size-cell">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 170" class="small" style="color:#0B1F3A;">
+          <g fill="currentColor">
+            <rect x="0"  y="0"   width="120" height="14"/><rect x="24" y="22"  width="72"  height="10"/>
+            <rect x="14" y="38"  width="92"  height="10"/><rect x="24" y="54"  width="72"  height="10"/>
+            <rect x="14" y="70"  width="92"  height="10"/><rect x="24" y="86"  width="72"  height="10"/>
+            <rect x="14" y="102" width="92"  height="10"/><rect x="24" y="118" width="72"  height="10"/>
+            <rect x="14" y="134" width="92"  height="10"/><rect x="0"  y="156" width="120" height="14"/>
+          </g>
+        </svg>
+        <span class="cap">28px</span>
+      </div>
+      <div class="size-cell">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 170" class="medium" style="color:#0B1F3A;">
+          <g fill="currentColor">
+            <rect x="0"  y="0"   width="120" height="14"/><rect x="24" y="22"  width="72"  height="10"/>
+            <rect x="14" y="38"  width="92"  height="10"/><rect x="24" y="54"  width="72"  height="10"/>
+            <rect x="14" y="70"  width="92"  height="10"/><rect x="24" y="86"  width="72"  height="10"/>
+            <rect x="14" y="102" width="92"  height="10"/><rect x="24" y="118" width="72"  height="10"/>
+            <rect x="14" y="134" width="92"  height="10"/><rect x="0"  y="156" width="120" height="14"/>
+          </g>
+        </svg>
+        <span class="cap">64px</span>
+      </div>
+      <div class="size-cell">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 170" class="large" style="color:#0B1F3A;">
+          <g fill="currentColor">
+            <rect x="0"  y="0"   width="120" height="14"/><rect x="24" y="22"  width="72"  height="10"/>
+            <rect x="14" y="38"  width="92"  height="10"/><rect x="24" y="54"  width="72"  height="10"/>
+            <rect x="14" y="70"  width="92"  height="10"/><rect x="24" y="86"  width="72"  height="10"/>
+            <rect x="14" y="102" width="92"  height="10"/><rect x="24" y="118" width="72"  height="10"/>
+            <rect x="14" y="134" width="92"  height="10"/><rect x="0"  y="156" width="120" height="14"/>
+          </g>
+        </svg>
+        <span class="cap">100px</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- ============================================================
+       CONCEPT 4 — WORDMARK
+       ============================================================ -->
+  <article class="concept">
+    <div class="concept-head">
+      <h2>Concept 4 · Wordmark</h2>
+      <span class="badge">No mark, type-led</span>
+    </div>
+    <p class="rationale">
+      <strong>The idea:</strong> no symbol at all. The wordmark <em>is</em> the brand — STRATAVERA in a confident sans, with PARTNERS sitting tighter beneath in spaced caps. A small three-line stratified rule between the two words is the only graphic device, and it nods to the strata theme without competing with the type.
+    </p>
+    <p class="rationale" style="margin-bottom: 36px;">
+      <strong>Tone:</strong> most institutional and most flexible — works at any size, in any context, including in-line in a sentence. Reads like McKinsey, BCG, Oliver Wyman. Best if Stratavera intends to compete on substance and let the name do the work.
+    </p>
+
+    <div class="label-row"><div>On white</div><div>On navy</div></div>
+    <div class="showcase">
+      <div class="panel light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" style="color:#0B1F3A;">
+          <text x="360" y="100" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="72" fill="currentColor" letter-spacing="0.012em">STRATAVERA</text>
+          <g transform="translate(360, 130)" fill="currentColor">
+            <rect x="-58" y="0"  width="116" height="3"/>
+            <rect x="-30" y="9"  width="60"  height="3"/>
+            <rect x="-12" y="18" width="24"  height="3"/>
+          </g>
+          <text x="360" y="184" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="17" fill="currentColor" opacity="0.6" letter-spacing="0.42em">PARTNERS</text>
+        </svg>
+      </div>
+      <div class="panel dark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" style="color:#FFFFFF;">
+          <text x="360" y="100" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="72" fill="currentColor" letter-spacing="0.012em">STRATAVERA</text>
+          <g transform="translate(360, 130)" fill="currentColor">
+            <rect x="-58" y="0"  width="116" height="3"/>
+            <rect x="-30" y="9"  width="60"  height="3"/>
+            <rect x="-12" y="18" width="24"  height="3"/>
+          </g>
+          <text x="360" y="184" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="17" fill="currentColor" opacity="0.7" letter-spacing="0.42em">PARTNERS</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="label-row" style="grid-template-columns: 1fr 1fr 1fr;">
+      <div>Smallest size</div><div>Standard</div><div>Hero</div>
+    </div>
+    <div class="sizes">
+      <div class="size-cell with-wordmark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" class="small" style="color:#0B1F3A;">
+          <text x="360" y="100" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="72" fill="currentColor" letter-spacing="0.012em">STRATAVERA</text>
+          <g transform="translate(360, 130)" fill="currentColor">
+            <rect x="-58" y="0"  width="116" height="3"/><rect x="-30" y="9"  width="60"  height="3"/><rect x="-12" y="18" width="24"  height="3"/>
+          </g>
+          <text x="360" y="184" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="17" fill="currentColor" opacity="0.6" letter-spacing="0.42em">PARTNERS</text>
+        </svg>
+        <span class="cap">120px</span>
+      </div>
+      <div class="size-cell with-wordmark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" class="medium" style="color:#0B1F3A;">
+          <text x="360" y="100" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="72" fill="currentColor" letter-spacing="0.012em">STRATAVERA</text>
+          <g transform="translate(360, 130)" fill="currentColor">
+            <rect x="-58" y="0"  width="116" height="3"/><rect x="-30" y="9"  width="60"  height="3"/><rect x="-12" y="18" width="24"  height="3"/>
+          </g>
+          <text x="360" y="184" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="17" fill="currentColor" opacity="0.6" letter-spacing="0.42em">PARTNERS</text>
+        </svg>
+        <span class="cap">220px</span>
+      </div>
+      <div class="size-cell with-wordmark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" class="large" style="color:#0B1F3A;">
+          <text x="360" y="100" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="72" fill="currentColor" letter-spacing="0.012em">STRATAVERA</text>
+          <g transform="translate(360, 130)" fill="currentColor">
+            <rect x="-58" y="0"  width="116" height="3"/><rect x="-30" y="9"  width="60"  height="3"/><rect x="-12" y="18" width="24"  height="3"/>
+          </g>
+          <text x="360" y="184" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="17" fill="currentColor" opacity="0.6" letter-spacing="0.42em">PARTNERS</text>
+        </svg>
+        <span class="cap">360px</span>
+      </div>
+    </div>
+  </article>
+
+</div>
+
+<footer class="note">
+  <div class="container">
+    <p><strong>How to use this preview:</strong> open in a browser (any modern browser will render the SVG and Inter font properly). Each concept is delivered as a standalone <code>.svg</code> file in <code>/assets/img/logo-concepts/</code> — both as the full lockup (mark + wordmark) and as the mark only. Colour is set via CSS <code>color:</code>, so the same SVG re-tints automatically when placed on light or dark backgrounds.</p>
+    <p style="margin-top: 12px;"><strong>Next step:</strong> tell me which direction (1, 2, 3 or 4) reads right and I'll build it out into a full identity — proper kerning of the wordmark as outlined paths, multiple lockup orientations (horizontal, stacked, mark-only), favicon set, and a one-page brand sheet with usage rules.</p>
+  </div>
+</footer>
+
+</body>
+</html>

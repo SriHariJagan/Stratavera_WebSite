@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Stratavera Partners</title>
+  <meta name="description" content="Get in touch with Stratavera Partners. Headquartered in Gurugram, India.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="nav">
+    <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="Stratavera Partners"></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="sectors.html">Sectors</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta"><a href="contact.html" class="btn btn-primary">Get in touch</a></div>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg width="22" height="14" viewBox="0 0 22 14" fill="none"><path d="M0 1h22M0 7h22M0 13h22" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs"><a href="index.html">Home</a><span class="sep">/</span> Contact</div>
+      <span class="accent-rule"></span>
+      <h1>Tell us what you're working on.</h1>
+      <p class="lead">We respond to every serious enquiry within two business days. If your project is in our wheelhouse we'll suggest a focused conversation; if it isn't, we'll say so.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-narrow">
+      <div class="split-2">
+        <!-- Contact details -->
+        <div>
+          <span class="eyebrow">Get in touch</span>
+          <h2>Direct lines.</h2>
+          <p>For project enquiries, partnership conversations or career questions — the fastest route is the form on the right, or directly by email.</p>
+
+          <div style="margin-top: 32px;">
+            <h4 style="text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.12em; color: var(--slate-600);">Email</h4>
+            <p><a href="mailto:mohit.sinha@stratavera.in" style="font-size: 1.05rem; font-weight: 500;">mohit.sinha@stratavera.in</a></p>
+          </div>
+
+          <div style="margin-top: 24px;">
+            <h4 style="text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.12em; color: var(--slate-600);">Phone</h4>
+            <p><a href="tel:+919810417398" style="font-size: 1.05rem; font-weight: 500;">+91 98104 17398</a></p>
+          </div>
+
+          <div style="margin-top: 24px;">
+            <h4 style="text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.12em; color: var(--slate-600);">Office</h4>
+            <p style="font-size: 1.05rem;">
+              Stratavera Partners Private Limited<br>
+              Gurugram, India
+            </p>
+          </div>
+
+          <div class="card" style="margin-top: 32px; background: var(--bg-soft);">
+            <h3 style="font-size: 1rem;">Response expectations</h3>
+            <p style="font-size: 0.92rem;">We typically reply within two business days. For urgent transaction timelines, please mark the subject line accordingly.</p>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div>
+          <div class="card" style="padding: 36px;">
+            <h2 style="font-size: 1.4rem;">Send a message</h2>
+            <p style="color: var(--slate-600); font-size: 0.95rem; margin-bottom: 24px;">All fields marked * are required.</p>
+
+            <!--
+              Form action: replace "#" with one of:
+                - https://formspree.io/f/your-form-id     (Formspree)
+                - /thanks  + add data-netlify="true" name="contact"   (Netlify)
+                - your own backend endpoint
+              And the script in main.js will get out of the way automatically.
+            -->
+            <form id="contact-form" class="form" action="#" method="POST">
+              <input type="hidden" name="_subject" value="New enquiry — Stratavera website">
+              <div class="row">
+                <div>
+                  <label for="name">Name *</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+              </div>
+              <div class="row">
+                <div>
+                  <label for="org">Organisation</label>
+                  <input type="text" id="org" name="organisation">
+                </div>
+                <div>
+                  <label for="topic">Topic</label>
+                  <select id="topic" name="topic">
+                    <option>Project enquiry</option>
+                    <option>Partnership / referral</option>
+                    <option>Career enquiry</option>
+                    <option>Media / speaking</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" required placeholder="Brief description of the project or enquiry..."></textarea>
+              </div>
+              <div>
+                <button type="submit" class="btn btn-primary">Send message <span class="arrow">→</span></button>
+              </div>
+              <p id="form-status" class="form-note"></p>
+              <p class="form-note">We'll only use your details to respond to this enquiry — no marketing, no list rentals.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/img/logo.png" alt="Stratavera Partners">
+        <p>Integrated advisory for transport, logistics, urban infrastructure and real estate. Headquartered in Gurugram, India.</p>
+      </div>
+      <div><h4>Firm</h4><ul><li><a href="about.html">About</a></li><li><a href="team.html">Team</a></li><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Services</h4><ul><li><a href="services.html">Feasibility &amp; DPRs</a></li><li><a href="services.html">PPP advisory</a></li><li><a href="services.html">Project management</a></li><li><a href="services.html">Bid management</a></li></ul></div>
+      <div><h4>Sectors</h4><ul><li><a href="sectors/transport.html">Transport</a></li><li><a href="sectors/urban-infrastructure.html">Urban infrastructure</a></li><li><a href="sectors/logistics.html">Logistics</a></li><li><a href="sectors/real-estate.html">Real estate</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© <span id="y"></span> Stratavera Partners Private Limited. All rights reserved.</div>
+      <div>Gurugram, India · <a href="mailto:mohit.sinha@stratavera.in">mohit.sinha@stratavera.in</a> · +91 98104 17398</div>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
